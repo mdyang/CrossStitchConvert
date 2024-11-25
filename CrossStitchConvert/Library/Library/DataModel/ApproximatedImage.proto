@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "Library.DataModel";
+
+message ApproximatedImageProtobuf {
+    repeated int32 attempted_colors = 1;
+    repeated int32 picked_colors = 2;
+    int32 distance = 3;
+    ImageData image_data = 4;
+}
+
+message ImageData {
+    repeated ImageColumnData columns = 1;
+}
+
+message ImageColumnData {
+    repeated int32 pixels = 1;
+}
